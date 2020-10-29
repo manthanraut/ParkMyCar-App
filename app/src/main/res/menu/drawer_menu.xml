@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <group android:checkableBehavior="single">
+        <item android:icon="@drawable/car" android:id="@+id/parking" android:title="Book a parking slot"/>
+        <item android:icon="@drawable/ic_baseline_local_parking_24" android:id="@+id/reminder" android:title="View Parking Spaces"/>
+        <item android:icon="@drawable/ic_baseline_search_24" android:id="@+id/search" android:title="Search a parking slot"/>
+        <item android:icon="@drawable/ic_baseline_history_24" android:id="@+id/history" android:title="History"/>
+        <item android:icon="@drawable/ic_baseline_person_24" android:id="@+id/nav_message" android:title="My Profile"/>
+        <item android:icon="@drawable/ic_baseline_email_24" android:id="@+id/sendfeedback" android:title="Send Feedback"/>
+        <item android:icon="@drawable/ic_baseline_description_24" android:id="@+id/guide" android:title="Guide"/>
+        <item android:icon="@drawable/about" android:id="@+id/about" android:title="About "/>
+        <item android:icon="@drawable/ic_baseline_settings_24" android:id="@+id/settings" android:title="Settings"/>
+    </group>
+    <item android:title="Other">
+        <menu>
+            <item android:icon="@drawable/ic_baseline_refresh_24" android:id="@+id/nav_share" android:title="Refresh"/>
+            <item android:icon="@drawable/logout" android:id="@+id/nav_id2" android:title="Logout"/>
+        </menu>
+    </item>
+</menu>

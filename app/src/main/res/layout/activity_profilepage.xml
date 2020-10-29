@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:background="@drawable/gradient"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.4">
+        <ImageView
+            android:layout_width="139dp"
+            android:layout_height="113dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/faceicon"/>
+        <TextView android:textSize="30sp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="@string/manthan_raut" android:fontFamily="serif"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="0.6">
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp">
+            <ImageView android:layout_width="60dp" android:layout_height="60dp" android:layout_marginLeft="20dp" android:layout_marginTop="10dp" android:src="@drawable/ic_baseline_person_24"/>
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="6dp" android:layout_marginTop="10dp" android:layout_marginRight="10dp">
+                <TextView android:textSize="20sp" android:textColor="@color/black" android:textStyle="bold" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Username" android:fontFamily="serif"/>
+                <TextView android:textSize="20sp" android:textColor="@color/black" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Manthan Rajesh Raut"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp">
+            <ImageView android:layout_width="60dp" android:layout_height="60dp" android:layout_marginLeft="20dp" android:layout_marginTop="10dp" android:src="@drawable/ic_baseline_email_24"/>
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="6dp" android:layout_marginTop="10dp" android:layout_marginRight="10dp">
+                <TextView android:textSize="20sp" android:textColor="@color/black" android:textStyle="bold" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="E-mail" android:fontFamily="serif"/>
+                <TextView android:textSize="20sp" android:textColor="@color/black" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="manthanraut118@gmail.com"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp">
+            <ImageView android:layout_width="60dp" android:layout_height="60dp" android:layout_marginLeft="20dp" android:layout_marginTop="10dp" android:src="@drawable/ic_baseline_smartphone_24"/>
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="6dp" android:layout_marginTop="10dp" android:layout_marginRight="10dp">
+                <TextView android:textSize="20sp" android:textColor="@color/black" android:textStyle="bold" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Mobile No." android:fontFamily="serif"/>
+                <TextView android:textSize="20sp" android:textColor="@color/black" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="9873672295"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp">
+            <ImageView android:layout_width="60dp" android:layout_height="60dp" android:layout_marginLeft="20dp" android:layout_marginTop="10dp" android:src="@drawable/car"/>
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="6dp" android:layout_marginTop="10dp" android:layout_marginRight="10dp">
+                <TextView android:textSize="20sp" android:textColor="@color/black" android:textStyle="bold" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Car Type" android:fontFamily="serif"/>
+                <TextView android:textSize="20sp" android:textColor="@color/black" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Personal "/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
