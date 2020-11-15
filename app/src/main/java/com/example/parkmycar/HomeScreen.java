@@ -1,5 +1,6 @@
 package com.example.parkmycar;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Toast;
@@ -53,11 +54,25 @@ public class HomeScreen extends AppCompatActivity implements OnNavigationItemSel
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new profile()).commit();
                 break;
             case R.id.nav_share /*2131230877*/:
-                Toast.makeText(this, "Share", 0).show();
+                Toast.makeText(this, "Already Updated!", Toast.LENGTH_SHORT).show();
                 break;
+                case R.id.logout /*2131230877*/:
+                    Intent intent = new Intent(this, loginDriver.class);
+                    startActivity(intent);
+                    break;
             case R.id.sendfeedback /*2131230929*/:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new feedback()).commit();
                 break;
+            case R.id.viewparking:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new fragment1()).commit();
+                break;
+            case R.id.bookparking:
+                Intent intent1 = new Intent(this, bookparking.class);
+                startActivity(intent1);
+            case R.id.search:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new detailsActivity()).commit();
+                break;
+
         }
         this.drawer.closeDrawer((int) GravityCompat.START);
         return true;

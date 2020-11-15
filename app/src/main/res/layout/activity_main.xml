@@ -27,7 +27,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout"/>
-    <Button android:textSize="22sp"
+    <Button
+
+        android:textSize="22sp"
         android:textStyle="bold"
         android:textColor="@color/white"
         android:id="@+id/button"
