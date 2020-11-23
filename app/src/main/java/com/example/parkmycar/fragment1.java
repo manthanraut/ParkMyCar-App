@@ -55,19 +55,23 @@ import android.view.ViewGroup;
 import androidx.fragment.app.Fragment;
 
 public class fragment1 extends Fragment {
-Button btn;
+Button btn1;
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         setHasOptionsMenu(true);
         View fragment1View = inflater.inflate(R.layout.fragment1, container, false);
-        btn = (Button) fragment1View.findViewById(R.id.button2);
-        btn.setOnClickListener(new View.OnClickListener() {
+
+        btn1 = (Button) fragment1View.findViewById(R.id.button3);
+
+
+        btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent in = new Intent();
-                in.setClass(getActivity(), parkingmap.class);
+                in.setClass(getActivity(), searchonmap.class);
                 startActivity(in);
-        }
-    });
+            }
+        });
+
         return fragment1View;
 }
 }

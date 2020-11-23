@@ -1,62 +1,109 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="@drawable/btn1"
     android:layout_marginLeft="15dp"
     android:layout_marginRight="15dp"
     android:layout_marginTop="15dp"
-    android:background="@drawable/listviewdesign"
-    android:orientation="horizontal"
-    android:padding="5dip" >
-    <ImageView
-        android:layout_width="wrap_content"
-        android:id="@+id/imgpic"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="9dp"
-        android:layout_marginLeft="9dp"
-        android:layout_marginTop="5dp"
-        android:background="@drawable/picon" />
+    android:stretchColumns="3"
+     >
 
-    <TextView
-        android:id="@+id/name"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginStart="14dp"
-        android:layout_marginLeft="14dp"
-        android:layout_marginTop="6dp"
-        android:layout_marginEnd="12dp"
-        android:layout_marginRight="12dp"
-        android:layout_toEndOf="@+id/imgpic"
-        android:layout_toRightOf="@+id/imgpic"
-        android:fontFamily="serif"
-        android:text="Name of place"
-        android:textColor="@color/black"
-        android:textSize="20dp"
-        android:textStyle="bold" />
+    <TableRow>
 
-    <TextView
-        android:id="@+id/desc"
-        android:layout_width="244dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/name"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginStart="11dp"
-        android:layout_marginLeft="11dp"
-        android:layout_marginTop="9dp"
-        android:layout_marginEnd="13dp"
-        android:layout_marginRight="13dp"
-        android:layout_toEndOf="@+id/imgpic"
-        android:layout_toRightOf="@+id/imgpic"
-        android:fontFamily="sans-serif-condensed-light"
-        android:text='parking near railway station'
-        android:textColor="@color/black"
-        android:textSize="18dp" />
+        <TextView
+            android:id="@+id/name"
+            android:layout_column="1"
+            android:text="Location Name"
+            android:drawableEnd="@drawable/marker"
+            android:drawableRight="@drawable/marker"
+            android:drawablePadding="15dp"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="serif"
+            android:layout_span="3"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:gravity="left"
+            android:textSize="22sp"
+            android:padding="3dip"
+             />
+    </TableRow>
+    <View
+        android:layout_height="2dip"
+        android:background="#FF909090" />
 
-</RelativeLayout>
+    <TableRow>
+
+        <TextView
+            android:layout_column="1"
+            android:text="Price"
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:fontFamily="serif"
+            android:background="#00E676"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:padding="3dip" />
+        <TextView
+            android:layout_column="2"
+            android:text="Capacity"
+            android:layout_width="0dp"
+            android:textStyle="bold"
+            android:fontFamily="serif"
+            android:background="#64B5F6"
+            android:textColor="@color/white"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="22sp"
+            android:padding="3dip" />
+        <TextView
+            android:layout_column="3"
+            android:text="Status"
+            android:fontFamily="serif"
+            android:textColor="@color/white"
+            android:layout_weight="1"
+            android:background="#FF8A65"
+            android:textStyle="bold"
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:textSize="22sp"
+            android:padding="3dip" />
+    </TableRow>
+    <TableRow>
+
+        <TextView
+            android:layout_column="1"
+            android:text="0.00"
+            android:id="@+id/cost"
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:padding="3dip" />
+        <TextView
+            android:layout_column="2"
+            android:text="0"
+            android:id="@+id/capacity"
+            android:layout_width="0dp"
+            android:textColor="@color/black"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="18dp"
+            android:padding="3dip" />
+        <TextView
+            android:layout_column="3"
+            android:text="Now Open"
+            android:id="@+id/type"
+            android:textColor="#64DD17"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:padding="3dip" />
+    </TableRow>
+
+</TableLayout>

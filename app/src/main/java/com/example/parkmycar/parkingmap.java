@@ -80,10 +80,10 @@ public class parkingmap extends AppCompatActivity implements OnMapReadyCallback,
         mapboxMap.setStyle(getString(R.string.navigation_guidance_day), new Style.OnStyleLoaded() {
             @Override
             public void onStyleLoaded(@NonNull Style style) {
+                String[] value={"Sanpada station","D Y Patil Hospital","D Y Patil Sports stadium","Nerul Station","Terna college","Seawoods Grand central Mall"};
                 enableLocationComponent(style);
                 IconFactory iconFactory = IconFactory.getInstance(parkingmap.this);
                 Icon icon = iconFactory.fromResource(R.drawable.picon);
-
                 addDestinationIconSymbolLayer(style);
                 mapboxMap.addMarker(new MarkerOptions()
                         .position(new LatLng(19.041902, 73.025760))

@@ -45,9 +45,10 @@ public class bookparking extends AppCompatActivity{
     protected LocationListener locationListener;
     protected Context context;
     TextView txtLat;
+    String cost;
     String lat;
     Spinner spin;
-    TextView time1,amt1;
+    TextView time1,amt1,costdisplay;
     String provider;
     protected String latitude,longitude;
     protected boolean gps_enabled,network_enabled;
@@ -60,20 +61,26 @@ public class bookparking extends AppCompatActivity{
         mEditTextInput = findViewById(R.id.edit_text_input);
         mTextViewCountDown = findViewById(R.id.text_view_countdown);
         mButtonSet = findViewById(R.id.button_set);
+        costdisplay=findViewById(R.id.costdisplay);
         mButtonStartPause = findViewById(R.id.button_start_pause);
         mButtonReset = findViewById(R.id.button_reset);
         paymentbutton = findViewById(R.id.paymentbtn);
         btn4 = findViewById(R.id.button4);
         time1=findViewById(R.id.time);
         amt1=findViewById(R.id.amt);
+        Intent intent = getIntent();
+        if(intent != null) {
+            cost = intent.getStringExtra("cost");
+        }
+        costdisplay.setText("Rs."+cost);
         String[] value={"Sanpada station","D Y Patil Hospital","D Y Patil Sports stadium","Nerul Station","Terna college","Seawoods Grand central Mall"};
         btn4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 float totaltime=(float)hours+(float)(minutes/60.0);
-                String str1 = Float.toString(totaltime);
+                String str1 = Float.toString(totaltime)+" hr";
                 time1.setText(str1);
-                float totalAmt= (float) (totaltime*30.0);
+                float totalAmt= (float) (totaltime*(float)Integer.parseInt(cost));
                 String amount = Float.toString(totalAmt);
                 amt1.setText(amount);
             }

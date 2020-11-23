@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fillViewport="false">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="@color/light_white"
+    tools:context=".LocationDetail">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:ignore="MissingConstraints">
+    <Button
+        android:id="@+id/back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:paddingTop="16dp"
+        android:drawableStart="@drawable/back"
+        android:layout_marginBottom="16dp"
+        android:background="@color/colorPrimary"
+        android:text="GO BACK"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:drawableLeft="@drawable/back" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Location Name"
+        android:textColor="@color/black"
+        android:textSize="26sp"
+        android:background="#E0E0E0"
+        android:fontFamily="sans-serif-condensed"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sanpada subway Rd., Sanpada"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:background="@color/white"
+        android:fontFamily="sans-serif-thin"
+        android:paddingTop="5dp"
+        android:textStyle="bold"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        tools:ignore="MissingConstraints">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SCAN TO CHECK-IN"
+            android:textColor="@color/black"
+            android:textSize="26sp"
+            android:gravity="center"
+            android:background="#E0E0E0"
+            android:fontFamily="sans-serif-condensed"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <ImageView
+            android:layout_width="200dp"
+            android:id="@+id/qr_image"
+            android:background="@drawable/qrcode"
+            android:layout_gravity="center"
+            android:layout_height="200dp"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Opening Hours"
+            android:textColor="@color/black"
+            android:textSize="26sp"
+            android:background="#E0E0E0"
+            android:fontFamily="sans-serif-condensed"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/opening_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mon - Sat 8 am to 10 pm"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:background="@color/white"
+            android:fontFamily="sans-serif-thin"
+            android:paddingTop="5dp"
+            android:textStyle="bold"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Full Address"
+            android:textColor="@color/black"
+            android:textSize="26sp"
+            android:background="#E0E0E0"
+            android:fontFamily="sans-serif-condensed"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/addr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="xyz abc"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:background="@color/white"
+            android:fontFamily="sans-serif-thin"
+            android:paddingTop="5dp"
+            android:textStyle="bold"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Parking capacity"
+            android:textColor="@color/black"
+            android:textSize="26sp"
+            android:background="#E0E0E0"
+            android:fontFamily="sans-serif-condensed"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/capacity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:background="@color/white"
+            android:fontFamily="sans-serif-thin"
+            android:paddingTop="5dp"
+            android:textStyle="bold"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cost per hour"
+            android:textColor="@color/black"
+            android:textSize="26sp"
+            android:background="#E0E0E0"
+            android:fontFamily="sans-serif-condensed"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/cost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:background="@color/white"
+            android:fontFamily="sans-serif-thin"
+            android:paddingTop="5dp"
+            android:textStyle="bold"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Contacts"
+            android:textColor="@color/black"
+            android:textSize="26sp"
+            android:background="#E0E0E0"
+            android:fontFamily="sans-serif-condensed"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/contacts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="email or mobile number"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:background="@color/white"
+            android:fontFamily="sans-serif-thin"
+            android:paddingTop="5dp"
+            android:textStyle="bold"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Parking space Code"
+            android:textColor="@color/black"
+            android:textSize="26sp"
+            android:background="#E0E0E0"
+            android:fontFamily="sans-serif-condensed"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/uniquecode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="P4325"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:background="@color/white"
+            android:fontFamily="sans-serif-thin"
+            android:paddingTop="5dp"
+            android:textStyle="bold"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Parking Type"
+            android:textColor="@color/black"
+            android:textSize="26sp"
+            android:background="#E0E0E0"
+            android:fontFamily="sans-serif-condensed"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Parallel street parking"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:background="@color/white"
+            android:fontFamily="sans-serif-thin"
+            android:paddingTop="5dp"
+            android:textStyle="bold"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Special about this place"
+            android:textColor="@color/black"
+            android:textSize="26sp"
+            android:background="#E0E0E0"
+            android:fontFamily="sans-serif-condensed"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Best parking facility at reasonable price"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:background="@color/white"
+            android:fontFamily="sans-serif-thin"
+            android:paddingTop="5dp"
+            android:textStyle="bold"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:paddingTop="15dp"
+        android:layout_weight="2"
+        android:layout_height="wrap_content"
+android:orientation="horizontal">
+
+
+    <Button
+        android:id="@+id/bookparking"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="16dp"
+        android:layout_weight="1"
+        android:background="@drawable/bg_round"
+        android:paddingTop="5dp"
+        android:paddingRight="15dp"
+        android:text="Book Parking"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+    </LinearLayout>
+
+</LinearLayout>
+
+</ScrollView>

@@ -34,8 +34,8 @@ import androidx.annotation.NonNull;
 import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.Fragment;
 
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
+
+
 
 import org.w3c.dom.Text;
 
@@ -48,26 +48,31 @@ public class myhistory1 extends Fragment {
     private static final int GET_IMAGE = 990;
     private static final int REQUEST_LOCATION = 1;
     LocationManager locationManager;
-    String latitude, longitude;
+    String latitude, longitude,val;
     Button button,btn,submitslot;
     TextView text;
-    FirebaseDatabase rootNode;
-    DatabaseReference reference;
+
     Uri imageUri;
     ImageView imageView;
     DatabaseHelper databaseHelper;
-    EditText description;
-    EditText name;
-    EditText capacity;
+    EditText name,desc,capacity,openingtime,addr,cost,contacts,uniquecode,type;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
         final View rootView = inflater.inflate(R.layout.activity_myhistory,
                 container, false);
-        this.description=(EditText) rootView.findViewById(R.id.desc);
+        this.desc=(EditText) rootView.findViewById(R.id.desc);
         this.name=(EditText)rootView.findViewById(R.id.name);
         this.capacity=(EditText)rootView.findViewById(R.id.capacity);
+        this.openingtime=(EditText)rootView.findViewById(R.id.opening_time);
+        this.addr=(EditText)rootView.findViewById(R.id.addr);
+        this.cost=(EditText)rootView.findViewById(R.id.cost);
+        this.contacts=(EditText)rootView.findViewById(R.id.contacts);
+        this.uniquecode=(EditText)rootView.findViewById(R.id.parkingcode);
+        this.type=(EditText)rootView.findViewById(R.id.type);
+        val = "P"+((int)(Math.random()*9000)+1000);
+        this.uniquecode.setText(val);
         submitslot=(Button)rootView.findViewById(R.id.submit);
         ActivityCompat.requestPermissions(getActivity(),new String[]
                 {Manifest.permission.ACCESS_FINE_LOCATION}, REQUEST_LOCATION);
@@ -111,11 +116,17 @@ public class myhistory1 extends Fragment {
                 bitmap.compress(Bitmap.CompressFormat.JPEG,100,baos);
                 byte[] data=baos.toByteArray();
                 //code for storing location inside database
-                String aa = myhistory1.this.description.getText().toString();
+                String aa = myhistory1.this.desc.getText().toString();
                 String bb = myhistory1.this.name.getText().toString();
                 String cc = myhistory1.this.capacity.getText().toString();
                 String dd = myhistory1.this.latitude;
                 String ee=myhistory1.this.longitude;
+                String ff = myhistory1.this.openingtime.getText().toString();
+                String gg = myhistory1.this.addr.getText().toString();
+                String hh = myhistory1.this.cost.getText().toString();
+                String ii = myhistory1.this.contacts.getText().toString();
+                String jj = myhistory1.this.uniquecode.getText().toString();
+                String kk = myhistory1.this.type.getText().toString();
                 ContentValues contentValues = new ContentValues();
                 contentValues.put("name",bb);
                 contentValues.put("description", aa);
@@ -123,13 +134,22 @@ public class myhistory1 extends Fragment {
                 contentValues.put("lat",dd);
                 contentValues.put("long",ee);
                 contentValues.put("image",data);
+                contentValues.put("opening_time",ff);
+                contentValues.put("address", gg);
+                contentValues.put("cost",hh);
+                contentValues.put("contacts",ii);
+                contentValues.put("parking_code",jj);
+                contentValues.put("parking_type",kk);
                 myhistory1.this.databaseHelper.insertLocation(contentValues);
                 /*
                 rootNode = FirebaseDatabase.getInstance();
                 reference = rootNode.getReference("location");
                 locationhelper locationclass= new locationhelper(bb,aa,cc,dd,ee,data);
                 reference.child(bb).setValue(locationclass);*/
-                Toast.makeText(getActivity(),"Location added successfully",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(),"New Location added successfully",Toast.LENGTH_SHORT).show();
+                Intent in = new Intent();
+                in.setClass(getActivity(), HomeScreen.class);
+                startActivity(in);
 
             }
         });

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
     <group android:checkableBehavior="single">
-        <item android:icon="@drawable/car" android:id="@+id/bookparking" android:title="Book a parking slot"/>
+        <item android:icon="@drawable/pcode1" android:id="@+id/bookparking" android:title="Book a parking slot"/>
         <item
-            android:icon="@drawable/ic_baseline_local_parking_24"
+            android:icon="@drawable/ic_baseline_navigation_24"
             android:id="@+id/viewparking"
-            android:title="View Map "/>
+            android:title="Direction"/>
         <item android:icon="@drawable/ic_baseline_search_24" android:id="@+id/search" android:title="View Parking spaces"/>
         <item android:icon="@drawable/addlocation" android:id="@+id/history" android:title="Add Parking"/>
         <item android:icon="@drawable/ic_baseline_person_24" android:id="@+id/nav_message" android:title="My Profile"/>

@@ -18,7 +18,7 @@
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.261"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteY="16dp" />
@@ -103,7 +103,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
         android:elevation="15in"
-        android:background="@drawable/btn"
+        android:background="@drawable/bg_round"
         android:fontFamily="sans-serif-condensed-medium"
         android:gravity="center"
         android:text="Send Your Message"

@@ -60,6 +60,8 @@
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="user">Already Have an Account?</string>
     <string name="access_token" translatable="false">pk.eyJ1IjoibWFudGhhbnJhdXQiLCJhIjoiY2tkYmM0Zmo1MWJrMTJ6czhxbXNvbHNsaSJ9.dWVxrAn2pisqGHQSiMPgVw</string>
+    <string name="map_key" translatable="false">AIzaSyCUAUsM4k7CQWzZAn-w4mxRXR-THS_JAsI</string>
+
     <string name="user_location_permission_explanation">This app needs location permissions to show its functionality.</string>
     <string name="user_location_permission_not_granted">You didn\'t grant location permissions.</string>
     <string name="country_prompt">Choose a country</string>
