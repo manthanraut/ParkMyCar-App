@@ -25,7 +25,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme_NoActionBar"
         android:usesCleartextTraffic="true">
-        <activity android:name=".LocationDetail"></activity>
+        <activity android:name=".forgotpassword"></activity>
+        <activity android:name=".LocationDetail" />
         <activity android:name=".searchonmap" />
 
         <meta-data

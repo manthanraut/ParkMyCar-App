@@ -52,4 +52,10 @@ public class loginDriver extends AppCompatActivity {
         in.setClass(this, registrationDriver.class);
         startActivity(in);
     }
+
+    public void toforgetpassword(View view) {
+        Intent in = new Intent();
+        in.setClass(this, forgotpassword.class);
+        startActivity(in);
+    }
 }

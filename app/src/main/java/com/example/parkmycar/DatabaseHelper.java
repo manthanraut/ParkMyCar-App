@@ -84,4 +84,15 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         Cursor res = db.rawQuery("select * from location", null);
         return res;
     }
+    public boolean updatedetails(String mail, String pwd)
+    {
+        SQLiteDatabase mDb= this.getWritableDatabase();
+        ContentValues args = new ContentValues();
+        //String query="UPDATE user SET password = "+password+"WHERE email = "+email;
+        //sql="UPDATE user SET password='"+pwd+"'WHERE email='"+mail+"'";
+
+        args.put("password",pwd);
+        mDb.update("user", args, "email = ?", new String[]{mail});
+        return true;
+    }
 }
